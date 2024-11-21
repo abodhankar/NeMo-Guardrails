@@ -28,15 +28,15 @@ models:
         model_name: "meta-llama/LlamaGuard-7b"
 
 rails:
-    input:
-      flows:
-      - llama guard check input
-    config:
-      fact_checking:
-        provider: align_score
-        parameters:
-          endpoint: "http:///localhost:5000/alignscore_base"
-    output:
-      flows:
-      - alignscore check facts
-      - llama guard check output
+  input:
+    flows:
+    - llama guard check input
+  config:
+    fact_checking:
+    provider: align_score
+    parameters:
+    endpoint: "http:///localhost:5000/alignscore_base"
+  output:
+    flows:
+    - alignscore check facts
+    - llama guard check output
