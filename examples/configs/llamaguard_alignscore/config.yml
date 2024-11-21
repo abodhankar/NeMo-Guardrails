@@ -17,15 +17,15 @@ sample_conversation: |
   bot action: bot say "NVIDIA AI Enterprise is a software suite that enables enterprises to easily deploy, manage, and scale AI workloads across bare-metal servers, virtual machines, and containerized environments, allowing you to accelerate your AI initiatives and optimize data center resources."
 
 models:
-    - type: main
-      engine: nim
-      model: meta/llama-3.1-70b-instruct
+  - type: main
+    engine: nim
+    model: meta/llama-3.1-70b-instruct
 
-    - type: llama_guard
-      engine: vllm_openai
-      parameters:
-          openai_api_base: "http://localhost:5123/v1"
-          model_name: "meta-llama/LlamaGuard-7b"
+  - type: llama_guard
+    engine: vllm_openai
+    parameters:
+        openai_api_base: "http://localhost:5123/v1"
+        model_name: "meta-llama/LlamaGuard-7b"
 
 rails:
     input:
